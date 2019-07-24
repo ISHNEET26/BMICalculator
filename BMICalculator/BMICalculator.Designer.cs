@@ -39,7 +39,7 @@
             this.CalculateBMIButton = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
             this.ResultLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.BMITableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.BMITableLayoutPanel.Controls.Add(this.MyWeightLabel, 0, 3);
             this.BMITableLayoutPanel.Controls.Add(this.MyHeightTextBox, 1, 2);
             this.BMITableLayoutPanel.Controls.Add(this.CalculateBMIButton, 0, 4);
-            this.BMITableLayoutPanel.Controls.Add(this.textBox1, 1, 5);
+            this.BMITableLayoutPanel.Controls.Add(this.ResultTextBox, 1, 5);
             this.BMITableLayoutPanel.Location = new System.Drawing.Point(2, 0);
             this.BMITableLayoutPanel.Name = "BMITableLayoutPanel";
             this.BMITableLayoutPanel.RowCount = 6;
@@ -150,7 +150,6 @@
             this.MyHeightTextBox.Name = "MyHeightTextBox";
             this.MyHeightTextBox.Size = new System.Drawing.Size(145, 38);
             this.MyHeightTextBox.TabIndex = 5;
-            this.MyHeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MyWeightTextBox
             // 
@@ -171,6 +170,7 @@
             this.CalculateBMIButton.TabIndex = 7;
             this.CalculateBMIButton.Text = "Calculate BMI";
             this.CalculateBMIButton.UseVisualStyleBackColor = true;
+            this.CalculateBMIButton.Click += new System.EventHandler(this.CalculateBMIButton_Click);
             // 
             // ResetButton
             // 
@@ -195,17 +195,18 @@
             this.ResultLabel.Text = "Result";
             this.ResultLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // ResultTextBox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ResultTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(154, 373);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 71);
-            this.textBox1.TabIndex = 10;
+            this.ResultTextBox.Enabled = false;
+            this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultTextBox.Location = new System.Drawing.Point(154, 373);
+            this.ResultTextBox.Multiline = true;
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.Size = new System.Drawing.Size(145, 71);
+            this.ResultTextBox.TabIndex = 10;
             // 
             // BMICalculator
             // 
@@ -239,7 +240,7 @@
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button CalculateBMIButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ResultTextBox;
     }
 }
 

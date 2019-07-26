@@ -9,13 +9,14 @@ namespace BMICalculator
     static class Program
     {/// <summary>
     /// Author Name : Ishneet Kaur
-    /// Student number - 301045264
+    /// Student number : 301045264
     /// Last date modified : 26 th July , 2019
     /// Revision History : 
-    /// Add Project Files : 23th July 2019
-    /// Basic Interface Created : 24th July 2019
-    /// Program Structure Created : 24th July 2019
-    /// Splash Screen Added : 24 th July 2019
+    /// Add Project Files          : 23th July, 2019
+    /// Basic Interface Created    : 24th, July 2019
+    /// Program Structure Created  : 24th, July 2019
+    /// Splash Screen Added        : 24th July, 2019
+    /// Project Description Added  : 26th, July 2019
     /// 
     /// Description of the program : The program calculates the Body Mass Index of an individual by taking inputs like height and weight of the person.
     ///  A person can input his details in metric and imperial units.
@@ -29,6 +30,8 @@ namespace BMICalculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //dictionary created
+            // scope : public
             Forms = new Dictionary<FormNames, Form>();
             Forms.Add(FormNames.WELCOME_SCREEN, new WelcomeScreen());
             Forms.Add(FormNames.BMI_FORM, new BMICalculator());

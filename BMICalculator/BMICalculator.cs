@@ -11,14 +11,38 @@ using System.Windows.Forms;
 namespace BMICalculator
 {
     public partial class BMICalculator : Form
-    {
+    {/// <summary>
+     ///  /// Author Name : Ishneet Kaur
+     /// Student number : 301045264
+     /// Last date modified : 26 th July , 2019
+     /// Revision History : 
+     /// Add Project Files          : 23th July, 2019
+     /// Basic Interface Created    : 24th, July 2019
+     /// Program Structure Created  : 24th, July 2019
+     /// Splash Screen Added        : 24th July, 2019
+     /// Project Description Added  : 26th, July 2019
+     /// 
+     /// Description of the program : The program calculates the Body Mass Index of an individual by taking inputs like height and weight of the person.
+     ///  A person can input his details in metric and imperial units.
+     /// </summary>
         public BMICalculator()
-        {
+        { ///<summary>
+          /// Functionality : It initializes the components.
+          /// Scope: Public
+          /// 
+          ///</summary>
             InitializeComponent();
         }
 
         private void CalculateBMIButton_Click(object sender, EventArgs e)
         {
+           ///<summary>
+           /// Functionality : This is the solution structure.
+           /// Scope: Private
+           /// Click event for calculating the BMI and displaying the result.
+           ///</summary>
+
+
             double height = Double.Parse(MyHeightTextBox.Text);
             double weight = Double.Parse(MyWeightTextBox.Text);
             double bmi = 0.0;
@@ -59,6 +83,11 @@ namespace BMICalculator
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
+            ///<summary>
+            /// Functionality : Reset button click event resets the screen to its original state.
+            /// Scope: Private
+            /// 
+            ///</summary>
             ResultTextBox.Text = " ";
             MyHeightTextBox.Text = " ";
             MyWeightTextBox.Text = " ";

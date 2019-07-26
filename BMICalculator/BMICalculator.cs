@@ -56,5 +56,14 @@ namespace BMICalculator
                 ResultTextBox.Text = "bmi =" + $"{bmi:f2}\n" + " Obese";
             }
         }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            ResultTextBox.Text = " ";
+            MyHeightTextBox.Text = " ";
+            MyWeightTextBox.Text = " ";
+            ImperialRadioButton.Checked = false;
+            MetricRadioButton.Checked = false;
+        }
     }
 }
